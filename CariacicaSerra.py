@@ -102,7 +102,7 @@ xml = """
          ]]></nfd>
 """
 
-#client = Client('http://servicos.cariacica.es.gov.br:8080/tbw/services/WSEntrada?wsdl', wsse=Signature('cert.pem', 'key.pem'))
-client = Client('http://servicos.cariacica.es.gov.br:8080/tbw/services/WSEntrada?wsdl')
+client = Client('http://servicos.cariacica.es.gov.br:8080/tbw/services/WSEntrada?wsdl', wsse=Signature('cert.pem', 'key.pem'))
+#client = Client('http://servicos.cariacica.es.gov.br:8080/tbw/services/WSEntrada?wsdl')
 
 print(client.service.nfdEntrada(cpfUsuario="55555555555", hashSenha="cRDtpNCeBiql5KOQsKVyrA0sAiA=", codigoMunicipio=3, nfd=xml))
